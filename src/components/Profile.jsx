@@ -25,7 +25,7 @@ export default function Profile() {
     }
 
     return (
-        <div className='bg-dark h-100'>
+        <div className='bg-dark vh-100 d-flex' style={{backgroundImage: "url('/bg.png')", backgroundSize: "cover"}}>
             <div className="container d-flex justify-content-center align-items-center">
                 <div className="card p-1 my-5">
                     <div className="upper w-100">
@@ -46,7 +46,7 @@ export default function Profile() {
                             <h4 className="mb-0"></h4>
                         }
                         <span className="text-muted d-block mb-2">{users.jobTitle}</span>
-                        <div className="d-flex justify-content-between align-items-center my-4 px-4">
+                        <div className="d-flex justify-content-center align-items-center my-4 px-4">
                             <div>
                                 <p>{users.Bio}</p>
                                 {users.profile ?

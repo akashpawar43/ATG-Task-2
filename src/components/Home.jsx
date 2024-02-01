@@ -30,23 +30,22 @@ export default function Home() {
             <div className="container py-5  justify-content-center ">
                 <div className="d-flex justify-content-center ">
                     <div className="col-md-8 people-nearby">
+                        <h1 className='text-white text-center'>Users</h1>
                         {users.map((user) => (
                             <Link to={`/profile/${user.id}`} className='text-decoration-none text-white'>
                                 <div key={user.profile.username} className="nearby-user border-top border-bottom align-items-center p-4 ">
                                     <div className="row">
                                         <div className="col-md-2 col-sm-2">
                                             <img src={user.avatar} onError={addDefaultSrc} className='rounded-circle' height={"100%"} width={"100%"} alt={user.profile.firstName} />
-                                            {/* <img src={user.avatar ? user.avatar : user.avatar } className='rounded-circle' height={"85%"} width={"85%"} alt="user" /> */}
                                         </div>
                                         <div className="col-md-7 col-sm-7 d-flex align-items-center">
                                             <div className=''>
                                                 <h5>{user.profile.firstName} {user.profile.lastName}</h5>
                                                 <p className='mb-0'>{user.jobTitle}</p>
-                                                {/* <h5><a href="#" className="">{user.profile.firstName} {user.profile.lastName}</a></h5> */}
                                             </div>
                                         </div>
                                         <div className="col-md-3 col-sm-3 d-flex align-items-center">
-                                            <button className="btn btn-primary pull-right">Add Friend</button>
+                                            <button className="btn btn-primary pull-right">Details</button>
                                         </div>
                                     </div>
                                 </div>
