@@ -37,15 +37,22 @@ export default function Profile() {
                         </div>
                     </div>
                     <div className="mt-5 text-center">
-                        {/* <h4 className="mb-0">{users.profile.username}</h4> */}
+                        {users.profile ?
+                            <h4 className="mb-0">{users.profile.firstName} {users.profile.lastName}</h4> :
+                            <h4 className="mb-0"></h4>
+                        }
+                        {users.profile ?
+                            <span className="mb-0">@{users.profile.username}</span> :
+                            <h4 className="mb-0"></h4>
+                        }
                         <span className="text-muted d-block mb-2">{users.jobTitle}</span>
                         <div className="d-flex justify-content-between align-items-center my-4 px-4">
                             <div>
                                 <p>{users.Bio}</p>
-                                {/* {users.profile.email ?
+                                {users.profile ?
                                     <p>{users.profile.email}</p> :
                                     <p>Ursula77@gmail.com</p>
-                                } */}
+                                }
                             </div>
                         </div>
                     </div>
