@@ -1,6 +1,6 @@
 
 <h1 align="center" style="border-bottom: none;">Users and Profile app</h1>
-<h3 align="center">Delivering Users and their Profile, our website keeps you informed about people and their professions, Contacts, and connection.</h3>
+<h3 align="center">Delivering Users and their Profile, our website keeps you informed about people and their professions, Contacts, and connection With Loading Screen.</h3>
 
 # Technology We Used :computer: 
 
