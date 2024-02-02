@@ -31,7 +31,8 @@ export default function Home() {
                 <div className="d-flex justify-content-center ">
                     <div className="col-md-8 people-nearby">
                         <h1 className='text-white text-center'>Users</h1>
-                        {users.map((user) => (
+                        {users.length > 0 ?
+                        (users.map((user) => (
                             <Link to={`/profile/${user.id}`} className='text-decoration-none text-white'>
                                 <div key={user.profile.username} className="nearby-user border-top border-bottom align-items-center p-3 ">
                                     <div className="row">
@@ -50,7 +51,9 @@ export default function Home() {
                                     </div>
                                 </div>
                             </Link>
-                        ))}
+                        )))    : 
+                        (<div className='text-white text-center'>Loading....</div>)
+                        }
                     </div>
                 </div>
             </div>
