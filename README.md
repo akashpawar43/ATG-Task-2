@@ -32,6 +32,12 @@ npm install
 npm run dev
 ```
 
+<p>3. Go to below url</p>
+
+```
+http://localhost:5173/
+```
+
 <p>3. For building Production build</p>
 
 ```
