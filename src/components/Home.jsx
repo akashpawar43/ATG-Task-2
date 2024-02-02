@@ -22,7 +22,7 @@ export default function Home() {
     }, [])
 
     const addDefaultSrc = (e) => {
-        e.target.src = `${profile}`;
+        e.target.src = profile;
     }
 
     return (
