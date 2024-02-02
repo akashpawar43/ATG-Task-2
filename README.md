@@ -15,7 +15,6 @@
 [![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://akashpawar43.netlify.app/)
 [![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/akashpawar23/)
 
-Get your news api key from here : https://newsapi.org/
 
 ## Instructions to Run the Code 
 
