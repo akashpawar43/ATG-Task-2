@@ -41,11 +41,13 @@ export default function Profile() {
                         </div>
                     </div>
                     <div className="mt-5 text-center">
-                        {users.profile &&
-                            <h4 className="mb-0">{users.profile.firstName} {users.profile.lastName}</h4>
+                        {users.profile ?
+                            <h4 className="mb-0">{users.profile.firstName} {users.profile.lastName}</h4> :
+                            <h4 className="mb-0">Loading...</h4>
                         }
-                        {users.profile &&
-                            <span className="mb-0">@{users.profile.username}</span>
+                        {users.profile ?
+                            <span className="mb-0">@{users.profile.username}</span> :
+                            <h4 className="mb-0">Loading...</h4>
                         }
                         <span className="text-muted d-block mb-2">{users.jobTitle}</span>
                         <div className="d-flex justify-content-center align-items-center my-4 px-4">
@@ -53,7 +55,7 @@ export default function Profile() {
                                 <p>{users.Bio}</p>
                                 {users.profile ?
                                     <p>{users.profile.email}</p> :
-                                    <p>Ursula77@gmail.com</p>
+                                    <p>Loading...</p>
                                 }
                             </div>
                         </div>
