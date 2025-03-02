@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import profile from '/profile.png';
+import arrow from '/left-arrow1.png';
 import axios from 'axios';
 
 export default function Profile() {
@@ -25,8 +26,11 @@ export default function Profile() {
     }
 
     return (
-        <div className='bg-dark vh-100 d-flex' style={{backgroundImage: "url('/bg.png')", backgroundSize: "cover"}}>
+        <div className='bg-dark vh-100 d-flex' style={{ backgroundImage: "url('/bg.png')", backgroundSize: "cover" }}>
             <div className="container d-flex justify-content-center align-items-center">
+                <Link to="/" className='position-absolute top-0 m-3 z-index-1' style={{ left: "0rem" }}>
+                    <img src={arrow} alt="arrow" />
+                </Link>
                 <div className="card p-1 my-5">
                     <div className="upper w-100">
                         <img src="https://i.imgur.com/Qtrsrk5.jpg" className="img-fluid w-100" />
@@ -37,13 +41,11 @@ export default function Profile() {
                         </div>
                     </div>
                     <div className="mt-5 text-center">
-                        {users.profile ?
-                            <h4 className="mb-0">{users.profile.firstName} {users.profile.lastName}</h4> :
-                            <h4 className="mb-0"></h4>
+                        {users.profile &&
+                            <h4 className="mb-0">{users.profile.firstName} {users.profile.lastName}</h4>
                         }
-                        {users.profile ?
-                            <span className="mb-0">@{users.profile.username}</span> :
-                            <h4 className="mb-0"></h4>
+                        {users.profile &&
+                            <span className="mb-0">@{users.profile.username}</span>
                         }
                         <span className="text-muted d-block mb-2">{users.jobTitle}</span>
                         <div className="d-flex justify-content-center align-items-center my-4 px-4">
